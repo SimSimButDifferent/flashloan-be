@@ -44,5 +44,20 @@ contract FlashLoan is FlashLoanSimpleReceiverBase {
         );
     }
 
+    function getBalance(address _tokenAddress) external view returns (uint256) {
+      return IERC20(_tokenAddress).balanceOf(address(this));
+    }
+
+    function withdraw(address _tokenAddress) external onlyOwner {
+      IERC20 token = IERC20(_tokenAddress);
+      token.transfer(msg.sender, token.balanceOf(address(this)));
+    }
+
+    modifier onlyOwner() {
+      require(msg.sender == owner, "Only the contract owner can call this function");
+      _;
+    }
+
+    receive() external payable {}
 
 }
