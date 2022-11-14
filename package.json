@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "aave": "^0.0.1-security",
+    "@aave/core-v3": "^1.16.2",
     "hardhat": "^2.12.2",
     "prettier": "^2.7.1"
   },
