@@ -1,10 +1,10 @@
 {
   "dependencies": {
-    "@aave/core-v3": "^1.16.2",
     "hardhat": "^2.12.2",
     "prettier": "^2.7.1"
   },
   "devDependencies": {
+    "@aave/core-v3": "^1.16.2",
     "@ethersproject/abi": "^5.4.7",
     "@ethersproject/providers": "^5.4.7",
     "@nomicfoundation/hardhat-chai-matchers": "^1.0.0",
